@@ -14,7 +14,7 @@
         font-weight: 400;
         font-size: 1.45vw;
         color: #496432;
-        max-width: 67%;
+        max-width: 68%;
 
         @include mobile{
             max-width: none;
@@ -22,7 +22,11 @@
             margin-right: 2vw;
             margin-bottom: 5vw;
         }
+        & +p{
+            margin-top: 1.5vw;
+        }
     }
+
 }
 
 .intro_left {
@@ -32,10 +36,26 @@
     background-repeat: no-repeat;
     background-size: contain;
     
+    @media(min-width:577px){
+        background-image: unset !important;
+        position: relative;
+    }
+    
     @include mobile{
         max-width: none;
         background-size: cover;
         padding-bottom: 3vw;
+    }
+}
+.intro_left_background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 73vw;
+
+    @include mobile{
+        display: none;
     }
 }
 
@@ -56,9 +76,9 @@
 
 .intro_right {
     position: absolute;
-    right: -5vw;
-    top: 0;
-    z-index: 1;
+    right: -2vw;
+    top: 3vw;
+    z-index: -2;
 
     @include mobile {
         position: static;
@@ -66,7 +86,7 @@
 
     & img {
         // width: 100%;
-        width: 44vw;
+        width: 42vw;
 
         @include mobile {
             width: 100%;

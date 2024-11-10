@@ -145,6 +145,10 @@
     bottom: -4vw;
     z-index: -2;
 
+    @include mobile{
+        display: none;
+    }
+
     &.--left {
         left: 0;
         bottom: -11vw;
