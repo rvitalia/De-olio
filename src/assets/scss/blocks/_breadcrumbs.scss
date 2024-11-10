@@ -1,0 +1,21 @@
+#breadcrumbs {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.2vw;
+    color: var(--accent-color);
+    margin-top: 3vw;
+}
+
+.breadcrumb_home{
+    text-decoration: underline;
+    transition: all 0.3s linear;
+
+    @media (hover:hover){
+        &:hover{
+            margin-top: -0.3vw;
+        }
+    }
+}
+.breadcrumb_last{
+    opacity: 0.8;
+}

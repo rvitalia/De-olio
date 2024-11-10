@@ -1,0 +1,45 @@
+.intro .container {
+    display: flex;
+    position: relative;
+}
+
+.intro {
+    & p {
+        margin: 0;
+        font-weight: 400;
+        font-size: 1.45vw;
+        color: #496432; 
+        max-width: 67%;       
+    }
+}
+
+.intro_left {
+    padding-top: 4.5vw;
+    padding-bottom: 1.5vw;
+    max-width: 72vw;
+    background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.intro_left_title {
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 4.8vw;
+    line-height: 111%;
+    text-transform: uppercase;
+    color: #496432;
+    margin-bottom: 1.9vw;
+}
+
+.intro_right{
+    position: absolute;
+    right: -5vw;
+    top: 0;
+    z-index: 1;
+
+    & img{
+        // width: 100%;
+        width: 44vw;
+    }
+}
