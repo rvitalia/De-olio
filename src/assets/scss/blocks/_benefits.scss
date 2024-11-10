@@ -2,15 +2,27 @@
     margin-top: 5vw;
     position: relative;
 
+    @include mobile {
+        margin-top: 16vw;
+    }
+
     & .container {
         grid-template-columns: repeat(3, 1fr);
         gap: 2.2vw;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
 .benefits_item {
     display: flex;
     flex-direction: column;
+
+    @include mobile{
+        margin-bottom: 14vw;
+    }
 
     & .img-wrap {
         flex-shrink: 0;
@@ -20,8 +32,17 @@
         align-items: center;
         margin-bottom: 6vw;
 
+        @include mobile {
+            height: 67vw;
+            margin-bottom: 0;
+        }
+
         & img {
             width: 22vw;
+
+            @include mobile {
+                width: 95vw;
+            }
         }
     }
 
@@ -30,6 +51,16 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+        background-repeat: no-repeat;
+        background-size: auto calc(100% - 15vw);
+
+        @include mobile{
+            padding-top: 8vw;
+        }
+
+        @media (min-width: 577px) {
+            background: unset !important;
+        }
     }
 }
 
@@ -40,6 +71,12 @@
     color: var(--accent-color-two);
     margin: 0;
     margin-bottom: 1.5vw;
+
+    @include mobile{
+        text-align: left;
+        font-size: 7.1vw;
+        margin-bottom: 4vw;
+    }
 }
 
 .benefits_item_text {
@@ -48,6 +85,11 @@
     font-size: 1.45vw;
     color: var(--accent-color-two);
     margin-bottom: 5vw;
+
+    @include mobile{
+        font-size: 4.6vw;
+        margin-bottom: 10vw;
+    }
 }
 
 .background_section {
@@ -59,6 +101,10 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100vw;
+
+    @include mobile {
+        display: none;
+    }
 }
 
 .benedits_item_link {
@@ -79,25 +125,33 @@
     height: 2.6vw;
     transition: all 0.3s linear;
 
-    @media (hover:hover){
-        &:hover{
+    @media (hover:hover) {
+        &:hover {
             transform: translateY(-0.1vw) scale(1.03);
             background: lighten($color: #c9cca2, $amount: 6%);
         }
     }
+
+    @include mobile{
+        width: 49vw;
+        height: 13vw;
+        border-radius: 6.1vw;
+        font-size: 4.1vw;
+    }
 }
 
-.leaf_decor{
+.leaf_decor {
     position: absolute;
     bottom: -4vw;
     z-index: -2;
 
-    &.--left{
+    &.--left {
         left: 0;
         bottom: -11vw;
         width: 15.6vw;
     }
-    &.--right{
+
+    &.--right {
         right: 0;
         width: 8vw;
     }

@@ -4,6 +4,10 @@
     font-size: 1.2vw;
     color: var(--accent-color);
     margin-top: 3vw;
+
+    @include mobile{
+        display: none;
+    }
 }
 
 .breadcrumb_home{

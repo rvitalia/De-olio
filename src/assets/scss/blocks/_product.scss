@@ -1,6 +1,13 @@
 .product {
     position: relative;
     margin-top: 5.5vw;
+
+    & .container {
+        @include mobile {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
 }
 
 .product_decor {
@@ -11,8 +18,16 @@
         left: 1vw;
         top: 0;
 
+        @include mobile {
+            top: -20vw;
+        }
+
         & img {
             width: 10.8vw;
+
+            @include mobile {
+                width: 28.5vw;
+            }
         }
     }
 
@@ -20,8 +35,17 @@
         right: 0;
         top: -6.5vw;
 
+        @include mobile{
+            bottom: -40vw;
+            top: unset;
+        }
+
         & img {
             width: 16vw;
+
+            @include mobile{
+                width: 46vw;
+            }
         }
     }
 }
@@ -29,6 +53,10 @@
 .product_inner {}
 
 .product_inner_lists {
+
+    @include mobile {
+        width: 100%;
+    }
 
     & li {
         position: absolute;
@@ -40,6 +68,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @include mobile {
+            position: static;
+        }
 
         & * {
             transition: all 0.5s linear;
@@ -54,6 +86,10 @@
             color: #496432;
             margin: 0;
             transition: all 0.5s linear;
+
+            @include mobile {
+                font-size: 5.5vw;
+            }
         }
 
         & p {
@@ -67,6 +103,10 @@
             opacity: 0;
             visibility: hidden;
             transition: all 0.5s linear;
+
+            @include mobile {
+                font-size: 3.7vw;
+            }
         }
 
         &:nth-child(1) {
@@ -75,6 +115,10 @@
             left: 90%;
             height: 10.5vw;
             z-index: 2;
+
+            @include mobile {
+                display: none;
+            }
 
             & h3 {
                 max-width: 11vw;
@@ -99,9 +143,23 @@
             top: -8%;
             left: 90%;
 
+            @include mobile {
+                opacity: 1;
+                margin-left: auto;
+                width: 65vw;
+                height: 47vw;
+                background-position: right;
+                background-image: url(../images/product/Vector5.svg) !important;
+            }
+
             & h3 {
                 max-width: 15vw;
                 margin-bottom: 0.8vw;
+
+                @include mobile {
+                    max-width: 40vw;
+                    margin-left: -12vw;
+                }
             }
 
             & p {
@@ -109,6 +167,10 @@
                 opacity: 1;
                 visibility: visible;
                 max-width: 20vw;
+
+                @include mobile {
+                    max-width: 62vw;
+                }
             }
         }
 
@@ -128,6 +190,10 @@
                     }
                 }
             }
+
+            @include mobile {
+                display: none;
+            }
         }
 
         &:nth-child(4) {
@@ -137,10 +203,22 @@
             height: 15vw;
             left: 94%;
 
+            @include mobile {
+                background-image: url(../images/product/Vector6.svg) !important;
+                width: 76vw;
+                height: 41vw;
+                opacity: 1;
+            }
+
+
             & h3 {
                 max-width: 15vw;
                 margin-bottom: 0.8vw;
                 margin-left: -1vw;
+
+                @include mobile {
+                    max-width: none;
+                }
             }
 
             & p {
@@ -149,6 +227,10 @@
                 visibility: visible;
                 max-width: 20vw;
                 margin-left: -1vw;
+
+                @include mobile {
+                    max-width: 60vw;
+                }
             }
         }
 
@@ -158,6 +240,10 @@
             left: 85%;
             height: 10vw;
             z-index: 2;
+
+            @include mobile {
+                display: none;
+            }
 
             @media (hover:hover) {
                 &:hover {
@@ -169,6 +255,7 @@
                 }
             }
         }
+
         &:nth-child(6) {
             opacity: 0;
             top: 46%;
@@ -176,11 +263,27 @@
             left: 91%;
             height: 17vw;
 
+            @include mobile {
+                background-image: url(../images/product/Vector8.svg) !important;
+                width: 74vw;
+                height: 50vw;
+                opacity: 1;
+                margin-top: 53vw;
+                margin-left: auto;
+                background-position: right;
+            }
+
             & h3 {
                 max-width: 15vw;
                 margin-bottom: 0.8vw;
                 margin-left: -1vw;
                 margin-top: -2vw;
+
+                @include mobile{
+                    max-width: none;
+                    margin-left: 19vw;
+                    margin-top: -4vw;
+                }
             }
 
             & p {
@@ -189,6 +292,11 @@
                 visibility: visible;
                 max-width: 25vw;
                 margin-left: -1.5vw;
+
+                @include mobile{
+                    max-width: 50vw;
+                    margin-left: 18vw;
+                }
             }
         }
 
@@ -198,6 +306,10 @@
             width: 38vw;
             height: 17vw;
             z-index: 2;
+
+            @include mobile {
+                display: none;
+            }
 
             & h3 {
                 margin-top: -2vw;
@@ -222,10 +334,23 @@
             left: 65%;
             height: 19.5vw;
 
+            @include mobile {
+                background-image: url(../images/product/Vector9.svg) !important;
+                width: 100vw;
+                height: 70vw;
+                opacity: 1;
+                margin-top: -18vw;
+            }
+
             & h3 {
                 max-width: 36vw;
                 margin-bottom: 0.8vw;
                 margin-left: -7vw;
+
+                @include mobile{
+                    max-width: 70vw;
+                    margin-left: -30vw;
+                }
             }
 
             & p {
@@ -234,6 +359,11 @@
                 visibility: visible;
                 max-width: 31vw;
                 margin-left: -4vw;
+
+                @include mobile{
+                    max-width: 70vw;
+                    margin-left: -28vw;
+                }
             }
         }
     }
@@ -243,19 +373,20 @@
     position: relative;
     max-width: max-content;
 
+    @include mobile {
+        max-width: none;
+    }
+
     & img {
         width: 62.5vw;
-    }
-}
 
-@keyframes hoverEffect {
-    0% {
-        //   visibility: hidden;
-        opacity: 0.1;
-    }
-
-    100% {
-        //   visibility: visible;
-        opacity: 1;
+        @include mobile {
+            position: absolute;
+            width: 96vw;
+            height: 82vw;
+            top: 70vw;
+            right: -4vw;
+            z-index: -1;
+        }
     }
 }
